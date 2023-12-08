@@ -1,0 +1,99 @@
+@import '../Abstracts/Mixin';
+
+.appointment-main {
+    // background-color: red;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    .appointment-part {
+        width: 75%;
+        padding: 2rem;
+        // position: relative;
+        display: flex;
+
+        @include mobile{
+            flex-direction: column;
+            padding: 1rem;
+            width: 100%;
+        }
+
+        .appointment-left {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            gap: 1rem;
+            position: relative;
+
+            @include mobile{
+                width: 100%;
+            }
+
+            .appointment-title {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: rgb(90, 89, 89);
+            }
+
+            .appointment-btn-part {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                // background-color: green;
+
+                .appointment-btn {
+                    padding: 1rem;
+                    background-color: #4fbc9d;
+                    border: none;
+                    color: white;
+                    border-radius: 10px;
+                    font-weight: 700;
+                    -webkit-box-shadow: 18px 23px 34px -15px rgba(0, 0, 0, 0.75);
+                    -moz-box-shadow: 18px 23px 34px -15px rgba(0, 0, 0, 0.75);
+                    box-shadow: 18px 23px 34px -15px rgba(0, 0, 0, 0.75);
+                }
+
+            }
+        }
+        .appointment-right{
+            width: 40%;
+            // background-color: red;
+
+            @include mobile{
+                display: none;
+            }
+
+            .appointment-icons{
+                padding: 10px;
+                width: auto;
+                height: 5rem;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                gap: 1rem;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.appointment-left::after{
+    content: "";
+    width: 1.5px;
+    height: 20vh;
+    display: block;
+    background-color: rgb(182, 175, 175);
+    position: absolute;
+    right: 0;
+
+    @include mobile{
+        display: none;
+    }
+    // top: 1px;
+    // transform: translateY(-50%);
+}

@@ -1,0 +1,194 @@
+@import '../Abstracts/Mixin';
+
+.navbar-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5rem;
+    // background-color: #33bedb;
+    background-color: white;
+    max-width: 100vw;
+    height: auto;
+    // position: sticky;
+    // top: 0;
+    // text-align: center;
+
+    @include mobile {
+        height: 5rem;
+        padding: 0rem 1rem;
+    }
+
+    .humberger {
+        display: none;
+
+        @include mobile {
+            display: initial;
+        }
+    }
+
+    .navbar-logo {
+        // background-color: red;
+
+        @include mobile {
+            width: fit-content;
+        }
+
+        .nav-title {
+            display: none;
+
+            @include mobile {
+                display: initial;
+                // background-color: red;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #183236;
+            }
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 3rem;
+            width: auto;
+            // background-color: #33bedb;
+            background-color: white;
+
+            @include mobile {
+                // display: none;
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    .navbar-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        color: black;
+        justify-content: center;
+        align-items: center;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 2rem;
+            // top: -20rem;
+            background-color: #116a68;
+            position: relative;
+            right: 10rem;
+            top: 26rem;
+            // width: 100vw;
+            justify-content: center;
+            align-items: center;
+            // padding-left: 4rem;
+            padding-top: 2rem;
+            z-index: 1;
+            // height: 100%;
+            width: 100%;
+            transition: 0.8s;
+            left: -400px;
+            margin-left: 0px;
+            height: 90vh;
+            border-top-right-radius: 20px;
+        }
+    }
+    .toggle{
+        left: -89px;
+        padding-left: 2rem;
+        // height: 90vh;
+    }
+
+    .contact-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 20px;
+        background-color: #116a68;
+        color: white !important;
+        border: none;
+        border-radius: 50%;
+        padding: 1rem;
+        font-weight: 700;
+        color: rgb(82, 79, 79);
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .nav-btn {
+        display: flex;
+        // background-color: red;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+
+
+
+        .user-btn {
+            display: flex;
+            // background-color: rgb(219, 215, 215);
+            justify-content: center;
+            align-items: center;
+
+
+            @include mobile {
+                display: none;
+            }
+
+            .user-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // background-color: green;
+                font-size: 1.5rem;
+            }
+
+
+            .user-info {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                padding: 8px 20px;
+                // gap: 1rem;
+                cursor: pointer;
+                border-radius: 10px;
+            }
+
+            .user-title {
+                font-weight: 700;
+            }
+
+            .user-dropdown {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.navbar-item {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-item:before {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    bottom: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+.navbar-item:hover:before {
+    height: 100%;
+}
+
+// .navbar-item:hover{
+//     font-size: 20px;
+//     transform: scale(1);
+//     color: grey;
+// }
+

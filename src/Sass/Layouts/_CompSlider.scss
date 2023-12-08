@@ -1,0 +1,64 @@
+@import '../Abstracts/Mixin';
+
+// MultiImageSlider.scss
+
+$primary-color: #3498db;
+$image-size: 100px;
+
+.multi-image-slider {
+  position: relative;
+  width: 300px;
+  margin: 20px;
+
+  .slider {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 5px;
+    border-radius: 5px;
+    background: #dcdcdc;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: $primary-color;
+      cursor: pointer;
+      margin-top: -8px; // Center the thumb vertically
+    }
+
+    &::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: $primary-color;
+      cursor: pointer;
+    }
+  }
+
+  .slider-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    .slider-image {
+      width: $image-size;
+      height: $image-size;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: transform 0.3s;
+
+      &.active {
+        transform: scale(1.2); // Increase size for the active image
+      }
+    }
+  }
+}

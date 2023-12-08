@@ -1,0 +1,28 @@
+@import '../Abstracts/Mixin';
+
+.partner-main{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 4.3rem;
+    // background-color: red;
+
+    .partner-part{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 60vw;
+        gap: 5rem;
+
+        @include mobile{
+            flex-direction: column;
+            width: fit-content;
+        }
+
+       .partner-img{
+        width: auto;
+        height: 10vh;
+        border-radius: 50%;
+       }
+    }
+}
